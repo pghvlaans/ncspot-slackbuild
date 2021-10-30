@@ -4,7 +4,7 @@ This is a SlackBuild for [Heinrik Friedrichsen's ncspot](https://github.com/hrkf
 
 **Sources**
 
-Being a rust-based project, hundreds of "crates" are included among the sources. `source ncspot.info` and `wget $DOWNLOAD` simplify the task of downloading considerably!
+Being a `rust`-based project, hundreds of "crates" are included among the sources. `source ncspot.info` and `wget $DOWNLOAD` simplify the task of downloading considerably!
 
 **Dependencies**
 
