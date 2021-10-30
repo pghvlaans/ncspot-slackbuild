@@ -8,4 +8,4 @@ Being a `rust`-based project, hundreds of "crates" are included among the source
 
 **Dependencies**
 
-`ueberzug` is an optional dependency that is needed to display album art. To enable this feature, use `COVERS=yes ./ncspot.SlackBuild`. In addition, `ncspot` will not work without a premium Spotify account.
+`ueberzug` is an optional runtime dependency that is needed to display album art. To enable this feature, use `COVERS=yes ./ncspot.SlackBuild`. In addition, `ncspot` will not work without a premium Spotify account.
