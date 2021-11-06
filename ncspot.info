@@ -1,7 +1,7 @@
 PRGNAM="ncspot"
 VERSION="0.9.0"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/refs/tags/v0.9.0.tar.gz \
+DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.0/ncspot-0.9.0.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/addr2line/addr2line-0.16.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/adler/adler-1.0.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/aes/aes-0.6.0.crate \
