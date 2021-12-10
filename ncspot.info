@@ -1,7 +1,9 @@
 PRGNAM="ncspot"
-VERSION="0.9.2"
+VERSION="0.9.3"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
+DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.3/ncspot-0.9.3.tar.gz \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/addr2line/addr2line-0.17.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/adler/adler-1.0.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/aes/aes-0.6.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/aes-ctr/aes-ctr-0.6.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/aes-soft/aes-soft-0.6.4.crate \
@@ -15,9 +17,10 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/arrayref/arrayref-0.3.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/arrayvec/arrayvec-0.5.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/async-io/async-io-1.6.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/async-trait/async-trait-0.1.51.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/atty/atty-0.2.14.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/async-trait/async-trait-0.1.52.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/atty/atty-0.2.11.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/autocfg/autocfg-1.0.1.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/backtrace/backtrace-0.3.63.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/base-x/base-x-0.2.8.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/base64/base64-0.13.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/bindgen/bindgen-0.56.0.crate \
@@ -41,10 +44,12 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/clap/clap-2.34.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/clipboard/clipboard-0.5.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/clipboard-win/clipboard-win-2.2.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/cloudabi/cloudabi-0.0.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/combine/combine-4.6.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/concurrent-queue/concurrent-queue-1.2.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/const_fn/const_fn-0.4.8.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/constant_time_eq/constant_time_eq-0.1.5.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/convert_case/convert_case-0.4.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/cookie/cookie-0.15.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/cookie_store/cookie_store-0.15.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/core-foundation/core-foundation-0.9.2.crate \
@@ -65,18 +70,25 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/dbus/dbus-0.9.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/dbus-tree/dbus-tree-0.9.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/derivative/derivative-2.2.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/derive-new/derive-new-0.5.9.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/derive_more/derive_more-0.99.17.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/digest/digest-0.9.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/dirs/dirs-1.0.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/dirs-next/dirs-next-1.0.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/dirs-sys-next/dirs-sys-next-0.1.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/discard/discard-1.0.4.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/encoding_rs/encoding_rs-0.8.29.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/downcast-rs/downcast-rs-1.2.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/encoding_rs/encoding_rs-0.8.30.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/enum-map/enum-map-0.6.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/enum-map-derive/enum-map-derive-0.4.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/enumflags2/enumflags2-0.6.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/enumflags2_derive/enumflags2_derive-0.6.4.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/exitfailure/exitfailure-0.5.1.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/failure/failure-0.1.8.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/failure_derive/failure_derive-0.1.8.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/fastrand/fastrand-1.5.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/fern/fern-0.6.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/fixedbitset/fixedbitset-0.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/fnv/fnv-1.0.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/foreign-types/foreign-types-0.3.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/foreign-types-shared/foreign-types-shared-0.1.1.crate \
@@ -95,20 +107,21 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/generic-array/generic-array-0.14.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/getrandom/getrandom-0.1.16.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/getrandom/getrandom-0.2.3.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/gimli/gimli-0.26.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/glob/glob-0.3.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/h2/h2-0.3.7.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/h2/h2-0.3.9.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/half/half-1.8.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/hashbrown/hashbrown-0.11.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/headers/headers-0.3.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/headers-core/headers-core-0.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/heck/heck-0.3.3.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/hermit-abi/hermit-abi-0.1.19.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/hermit-abi/hermit-abi-0.1.20.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/hmac/hmac-0.11.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/http/http-0.2.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/http-body/http-body-0.4.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/httparse/httparse-1.5.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/httpdate/httpdate-1.0.2.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/hyper/hyper-0.14.15.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/hyper/hyper-0.14.16.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/hyper-proxy/hyper-proxy-0.9.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/hyper-tls/hyper-tls-0.5.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ident_case/ident_case-1.0.1.crate \
@@ -122,22 +135,24 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/jni-sys/jni-sys-0.3.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/jobserver/jobserver-0.1.24.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/js-sys/js-sys-0.3.55.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/lazy_static/lazy_static-0.2.11.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/lazy_static/lazy_static-1.4.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/lazycell/lazycell-1.3.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/lewton/lewton-0.10.2.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/libc/libc-0.2.108.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/libc/libc-0.2.110.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/libdbus-sys/libdbus-sys-0.2.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/libloading/libloading-0.7.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/libm/libm-0.2.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-binding/libpulse-binding-2.25.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-simple-binding/libpulse-simple-binding-2.24.1.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-simple-sys/libpulse-simple-sys-1.19.1.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-sys/libpulse-sys-1.19.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-simple-sys/libpulse-simple-sys-1.19.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/libpulse-sys/libpulse-sys-1.19.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/librespot-audio/librespot-audio-0.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/librespot-core/librespot-core-0.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/librespot-metadata/librespot-metadata-0.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/librespot-playback/librespot-playback-0.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/librespot-protocol/librespot-protocol-0.3.1.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/lock_api/lock_api-0.3.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/lock_api/lock_api-0.4.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/log/log-0.4.14.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/mac-notification-sys/mac-notification-sys-0.3.0.crate \
@@ -146,13 +161,16 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/maplit/maplit-1.0.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/matches/matches-0.1.9.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/maybe-async/maybe-async-0.2.6.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/memchr/memchr-1.0.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/memchr/memchr-2.4.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/mime/mime-0.3.16.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/mime_guess/mime_guess-2.0.3.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/miniz_oxide/miniz_oxide-0.4.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/mio/mio-0.7.14.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/miow/miow-0.3.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/native-tls/native-tls-0.2.8.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/nb-connect/nb-connect-1.2.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/ncspot/ncspot-0.9.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/ncspot/ncspot-0.9.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ncurses/ncurses-5.101.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk/ndk-0.3.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk/ndk-0.4.0.crate \
@@ -161,7 +179,9 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk-macro/ndk-macro-0.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk-sys/ndk-sys-0.2.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/nix/nix-0.17.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/nix/nix-0.18.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/nix/nix-0.20.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/nom/nom-3.2.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/nom/nom-5.1.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/notify-rust/notify-rust-4.5.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ntapi/ntapi-0.3.6.crate \
@@ -180,6 +200,7 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/objc/objc-0.2.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/objc-foundation/objc-foundation-0.1.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/objc_id/objc_id-0.1.1.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/object/object-0.27.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/oboe/oboe-0.4.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/oboe-sys/oboe-sys-0.4.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ogg/ogg-0.8.0.crate \
@@ -188,19 +209,23 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/openssl/openssl-0.10.38.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/openssl-probe/openssl-probe-0.1.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/openssl-sys/openssl-sys-0.9.71.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/os_pipe/os_pipe-0.9.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/owning_ref/owning_ref-0.4.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pancurses/pancurses-0.16.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pancurses/pancurses-0.17.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/parking/parking-2.0.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/parking_lot/parking_lot-0.10.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/parking_lot/parking_lot-0.11.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/parking_lot_core/parking_lot_core-0.7.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/parking_lot_core/parking_lot_core-0.8.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pbkdf2/pbkdf2-0.8.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pdcurses-sys/pdcurses-sys-0.7.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/peeking_take_while/peeking_take_while-0.1.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/percent-encoding/percent-encoding-2.1.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/petgraph/petgraph-0.5.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pin-project-lite/pin-project-lite-0.2.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/pin-utils/pin-utils-0.1.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/pkg-config/pkg-config-0.3.22.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/pkg-config/pkg-config-0.3.23.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/platform-dirs/platform-dirs-0.3.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/polling/polling-2.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/portaudio-rs/portaudio-rs-0.3.2.crate \
@@ -209,12 +234,14 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/priority-queue/priority-queue-1.2.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro-crate/proc-macro-crate-0.1.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro-crate/proc-macro-crate-1.1.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro-error/proc-macro-error-1.0.4.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro-error-attr/proc-macro-error-attr-1.0.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro-hack/proc-macro-hack-0.5.19.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro2/proc-macro2-1.0.32.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/proc-macro2/proc-macro2-1.0.33.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/protobuf/protobuf-2.25.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/protobuf-codegen/protobuf-codegen-2.25.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/protobuf-codegen-pure/protobuf-codegen-pure-2.25.2.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/psl-types/psl-types-2.0.8.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/psl-types/psl-types-2.0.10.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/publicsuffix/publicsuffix-2.1.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/quote/quote-1.0.10.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.8.4.crate \
@@ -238,12 +265,13 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rspotify-macros/rspotify-macros-0.11.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rspotify-model/rspotify-model-0.11.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rust-argon2/rust-argon2-0.8.3.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/rustc-demangle/rustc-demangle-0.1.21.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rustc-hash/rustc-hash-1.1.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rustc-serialize/rustc-serialize-0.3.24.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rustc_version/rustc_version-0.2.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rustc_version/rustc_version-0.4.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/rustls/rustls-0.20.2.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/rustversion/rustversion-1.0.5.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/rustversion/rustversion-1.0.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ryu/ryu-1.0.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/same-file/same-file-1.0.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/schannel/schannel-0.1.19.crate \
@@ -255,9 +283,9 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/semver/semver-0.9.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/semver/semver-1.0.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/semver-parser/semver-parser-0.7.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/serde/serde-1.0.130.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/serde/serde-1.0.131.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_cbor/serde_cbor-0.11.2.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_derive/serde_derive-1.0.130.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_derive/serde_derive-1.0.131.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_json/serde_json-1.0.72.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_repr/serde_repr-0.1.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/serde_urlencoded/serde_urlencoded-0.7.0.crate \
@@ -267,7 +295,7 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/shannon/shannon-0.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/shell-words/shell-words-1.0.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/shlex/shlex-0.1.1.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/signal-hook/signal-hook-0.3.10.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/signal-hook/signal-hook-0.3.12.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/signal-hook-registry/signal-hook-registry-1.4.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/slab/slab-0.4.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/smallvec/smallvec-1.7.0.crate \
@@ -276,6 +304,7 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/stable_deref_trait/stable_deref_trait-1.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/standback/standback-0.2.17.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/static_assertions/static_assertions-1.1.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/stderrlog/stderrlog-0.4.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/stdweb/stdweb-0.1.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/stdweb/stdweb-0.4.20.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/stdweb-derive/stdweb-derive-0.5.3.crate \
@@ -283,6 +312,8 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/stdweb-internal-runtime/stdweb-internal-runtime-0.1.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/strsim/strsim-0.8.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/strsim/strsim-0.9.3.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/structopt/structopt-0.3.25.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/structopt-derive/structopt-derive-0.4.18.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/strum/strum-0.22.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/strum/strum-0.23.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/strum_macros/strum_macros-0.22.0.crate \
@@ -292,10 +323,12 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/synstructure/synstructure-0.12.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/tempfile/tempfile-3.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/term_size/term_size-0.3.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/termcolor/termcolor-1.1.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/termion/termion-1.5.6.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/textwrap/textwrap-0.11.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/thiserror/thiserror-1.0.30.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/thiserror-impl/thiserror-impl-1.0.30.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/thread_local/thread_local-0.3.4.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/time/time-0.1.44.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/time/time-0.2.27.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/time-macros/time-macros-0.1.1.crate \
@@ -311,13 +344,16 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/tower-service/tower-service-0.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/tracing/tracing-0.1.29.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/tracing-core/tracing-core-0.1.21.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/tree_magic/tree_magic-0.2.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/try-lock/try-lock-0.2.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/typenum/typenum-1.14.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/unicase/unicase-2.6.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/unicode-bidi/unicode-bidi-0.3.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/unicode-normalization/unicode-normalization-0.1.19.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/unicode-segmentation/unicode-segmentation-1.8.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/unicode-width/unicode-width-0.1.9.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/unicode-xid/unicode-xid-0.2.2.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/unreachable/unreachable-1.0.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/untrusted/untrusted-0.7.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ureq/ureq-2.3.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/url/url-2.2.2.crate \
@@ -340,6 +376,11 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.78.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/wasmer_enumset/wasmer_enumset-1.0.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/wasmer_enumset_derive/wasmer_enumset_derive-0.5.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wayland-client/wayland-client-0.27.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wayland-commons/wayland-commons-0.27.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wayland-protocols/wayland-protocols-0.27.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wayland-scanner/wayland-scanner-0.27.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wayland-sys/wayland-sys-0.27.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/web-sys/web-sys-0.3.55.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/webbrowser/webbrowser-0.5.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/webpki/webpki-0.22.0.crate \
@@ -358,6 +399,7 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/winreg/winreg-0.5.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/winreg/winreg-0.7.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/winrt-notification/winrt-notification-0.5.0.crate \
+          https://crates-io.s3-us-west-1.amazonaws.com/crates/wl-clipboard-rs/wl-clipboard-rs-0.4.1.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/x11-clipboard/x11-clipboard-0.3.3.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/xcb/xcb-0.8.2.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/xi-unicode/xi-unicode-0.3.0.crate \
@@ -368,7 +410,9 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.2/ncspot-0.9.2.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/zerocopy-derive/zerocopy-derive-0.2.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/zvariant/zvariant-2.10.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/zvariant_derive/zvariant_derive-2.10.0.crate"
-MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
+MD5SUM="3a45916ce54a57a21daee2021ff4e18d \
+	c4c6ae55973b5054bf10f574fe49317f \
+        669215548c64019c08c92b2c1afd3deb \
         bd53a9f0ec43690f84e8c96bba8e538d \
         db6f9a586bda62de931be1b2bce9cd34 \
         b14b12cd0e866930de1993132c85705b \
@@ -382,9 +426,10 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         6ff474dd60c839a9c788844b7a42c72c \
         c83252f91435a921e7e4434956010344 \
         8588bed0c242a7e964ac4cf236dbccd2 \
-        f61ba1b85e6ffae3e6c0dc7b7383db7f \
-        142cb4b9a653e56e56311f0c883b8582 \
+        f3bf7f61aeafc26eea205f0e05f1beea \
+        5d7155b7fbc0e234c017f418f0dc9d64 \
         c6443ec8d007c729ba5482008d0c864d \
+        8172122974c460d22c3f8d895262be19 \
         50b80bd6ac81e09a40eb3e865b0920e2 \
         80a2c27647a6acb1890a3a7de8fded72 \
         bbc1b4852c4eb23effe97764def8d1ce \
@@ -408,10 +453,12 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         59ae9122b2946d4d52bc48a1da5c5e06 \
         7aa34fd63d9334802314b4305c78021a \
         eb6e4217d79aefec36a4d1068b4ae278 \
+        1c8b50f8528dd37df7d984e0e4b61bd5 \
         6720cb0b90edd31fbd3d78f3186b5027 \
         f637bf20fac185ee2687bb2a08325e59 \
         69ffb49942f307a6da28626cc2ab7aa6 \
         ec9751a4c0d35e7313e52ddb7147376b \
+        fff3aa07be4920daefab088326186e76 \
         8429c8fdb57ee84042a5e675ecb81838 \
         79fab551108329d3a18b31edb0b410aa \
         d0af2883c35f5c7677a32013d9532ab8 \
@@ -432,18 +479,25 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         3ddbeaaa356f7725a3e4c12ff457d6b0 \
         bcc9f4108e0c21c7b48b692c06077828 \
         59978ef7bcea7bc55e24d06a2d32a32c \
+        82b01392ec0b278bdfc549514900d778 \
+        b4585736b4551ce939e025bce98973fc \
         493a2f042d86baa5c6bac75202c64554 \
         f9f233221c0202b616d6957925c41ac8 \
         e8f53be89a66884dbb2cf3f6b55d41a9 \
         056c8d712ee146347c412b72f4077b2f \
         20006dab4b1bd43c86688877ecd58e8f \
-        8e9afdf56f2eef96f13beb5da21a63a1 \
+        09b520d03e86d50e3ac39d856d5aec32 \
+        a6242be0e2040974cb83dc7c4c67b761 \
         2ff3ca4216c98b56adcf0f43500a503c \
         9fffae374f7ce3e0414c7272e821fa35 \
         8c1bba1510c915f915a9eca6fa95f476 \
         3d2977b047e366303274ab03ebef1c2b \
+        cea2725b89b7f702dcdb2c8d24e33ab3 \
+        e0f2cb8a84777de3cf3ab813b96f42f6 \
+        2fe508e60645a30eeed34748e278bd3b \
         06aa7e0531c8336726059a08d4579da8 \
         9bb99bc31c32da009e64621f4c635748 \
+        7ad1eb066162072d669067ee8fcb2e34 \
         8dab3b3ec00dc56cffde0b0c410d47b5 \
         78c898fdaa3968e23904bf8538c4a271 \
         667e86b8b8d96ab4e9605627ce7dcc9a \
@@ -462,20 +516,21 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         65cd30f86e785b77fd82e0693d126e26 \
         15d3113e5507c411419fa64f6b9d5349 \
         9db1c40cc98e60cc7bd6782249a0ba01 \
+        ac4775c8640cd2c698e1639e7cd6e788 \
         e7c07242a95ee1df865efe9534e10a34 \
-        d502f04325cf554ef3d7b95ed0db8d13 \
+        9347f0785e2117f9e04d657fa4e31f39 \
         fea840ce07a32bdace46c59c41362f3b \
         62b3edf8c2db7fccb1a6a41134b84e62 \
         a68cfb088ae803647a856646f4de9989 \
         0372a8de508e57da4d4869f058bcb630 \
         d4310bba2bdd940077329f6fca3fde78 \
-        0b7994d1256215201bdfb810a357ffa2 \
+        b75eb4dc8ce5f12f28a3854f9d4a1ba5 \
         656eb112c9634812796a81803b04a3e6 \
         53db75c57dca6ad901433563732040de \
         e685b43c1f198999c125bc7bbe084ab3 \
         e40d2efcee31e346fbc82277683422ea \
         4918da28fbc2f6888ad71c159996a9b5 \
-        53ca5d4c78e9902c6ecdc780012194a7 \
+        8e87a3c1697ca04a19ebde7187f15156 \
         31667fab2083c342c85bb51c2cba6d58 \
         6540f0c2d7dce570f06661292fc68cab \
         fe77a3f609b6fd8d5b08f3b2ef14d2ad \
@@ -489,22 +544,24 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         73272fe4aadb91d550dca8fc7ead8bf7 \
         3aefa31e8413112958290a6ca004b096 \
         8d01a221c47a40f0a094198a17812d6f \
+        527a21498a2024a22701808bfc3eba54 \
         fba3b040a55c01be7376d3dd5c4d4920 \
         23cc9e52c52465f5b225e62ab7cc3457 \
         d3d110551104b00b42c9920958939391 \
-        2a9685e1ede819d85a4c2b9d03817f0f \
+        7cd816373efc385d9fa31da11b41f248 \
         b572f0c3d1144e7c35dcdfd4f08913f8 \
         13d29546291c38849fb116f2e3e3b5e4 \
         5b23904f9579d1efd0e914257517eeb5 \
         2accb8d83a53a5d68765df72a78f94d4 \
         8c6f7dc1ed766fe740fed0d01fb27e63 \
-        a316d8ffaec72529d7538f3a99c0ec93 \
-        3627ee8676297be9725c29f9b998bc38 \
+        4ba60e706b5e69a88192ff773b27a229 \
+        58d0064087bc800cf6ee10d667651491 \
         2721e88844fd0335095f7e99df1ebbb9 \
         e85f829193ea1afa080dcff7f77cf945 \
         9e3ea187f6e3f01e3c9590782c744b3e \
         c000dfa6a77a58ede02be41418056bf3 \
         9e0bf233b47424b8449a928bd31a1470 \
+        19466d8edb3c032438026125770b17f9 \
         90bcfdd7962fdd94b0f3a70a0819d3cc \
         40e508baeee8cdccbc471489b0f449ff \
         5197b999cd92f1978f284b61ce6e7969 \
@@ -513,13 +570,16 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         47580fad08273a52e998f84ef404912e \
         5ac809692422b722eaded90be3c4d9c2 \
         3afb7ba2118469de0c132c5360f5cf76 \
+        b961d154bd164250ba7b651a1643db72 \
         d75b1c734f85b007c55ca84217df4201 \
         a362e890dd0dfe51ecd95a4a1be6e28c \
+        f7bde0c2e5fd9542f7ccb5e6fc40eb04 \
+        084881559fa038861d17e7b0aa76f54e \
         84c0c029460fffc209296b914a16e4c8 \
         4604959975c2154a14f6b5e97444e2c8 \
         1e10d623dcba53dc554ee403cbcb3b29 \
         4917ff4eaed099a21ff16b96f0df49cb \
-        c8e96e08ba8964eddcdbabae755d5da0 \
+        8e182a490794e034f1661937ea2c190e \
         81f3d69af8142596468325954a52dea3 \
         1350474dafc8340347a27e7068b8a9d4 \
         f055692058d8fdce78ff36a7e30d59b4 \
@@ -528,7 +588,9 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         68f1770b5bc8e1c9be4a4144da46aa33 \
         d8ff96e213c6af86ced5c9d12d4c1dbf \
         c45800f4dfb888a928c772b081065214 \
+        d0daed97b20f4a6b23c8d4e2ac7b77a8 \
         2e504fc2b79dc46f983c960e30be1702 \
+        1ee36ecee72339333335c8dbc5a5f501 \
         bd9b057de16e5b299bcda0894cfd823e \
         1a8eec0ccb23cecc3325c0adb67d4d5d \
         420f93a43fa603c1253213bdf28983df \
@@ -547,6 +609,7 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         b4dcac855af5df71f3383d86c4a96b78 \
         aecd889de42c8168e1bc97a6f2720d8f \
         fd9aa273ad560dedd00ddcf3dbe808ce \
+        63b69730098e3fb0f948d359923d1e04 \
         279a8a77098b8e24b56b3d256eaf5427 \
         b4abad9fb0ace2d7e2cf23cfa60b6ae2 \
         e460418ee4f5508bc53c97e809331882 \
@@ -555,19 +618,23 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         a1688f08e7a5cb1b03d10d62ba17b43b \
         07180a18be7f641773b40864fa9754b8 \
         378d191896258de443c5deef9608c898 \
+        dbb9cb2df8d8af19d381659e0fabe7de \
         6fb245ba04d6859fadef5fe22806355b \
         8cfe07dc88814bf7ac53438f8071bf1d \
         ef6fc33d718cd6aa793a60f884d62611 \
         205459def23510e8815562e73a65c898 \
+        8d7308960df5143fe29a4a31c0c5f9c9 \
         12e4ba5909e1f30b9142932571eaa4da \
+        be2af3efcea9586194e249f646161d83 \
         233dee08f26c9cbe78f29b66c0c20ccd \
         cf2f0435bd5b5111fea46e8d9dc6522d \
         fbb87d3e5015e2ac193545f18bc5d20f \
         7e264bc8f23a45ad680668cb5e57d9fd \
         f490982aceabdbd515348f63e638a782 \
+        4406e38682598909e53df9f8a8ea15e9 \
         499155f20603f837aa2d4710a6ac38de \
         07c75fec267864bcbb800ca7709ceae2 \
-        1236023abc760e0e79de0dc634fd9fd8 \
+        f5fc3f219cb763eb02b95483c3e50f9e \
         84dacc478522497f5c7264c62a2c83ac \
         1d827ececfe381f71248b88ec399f359 \
         1262dd2afb9bbb47b9075ead3102da9e \
@@ -576,12 +643,14 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         d6291d0e18f55b8364b36a7f5e1af699 \
         5ecf56203dda9419751b532d99c3601d \
         0baac9bed3d6065b6128aa8a888e5eb9 \
+        6a32bab57772c3a1146d599b65ffb0cb \
+        7d76a523677de261dda1b65d29a93c4e \
         c7c38eb603bed6f42edbc4294806a44a \
-        000d675657f9e2041501b0cca03131f9 \
+        b7be3d977584177c655b0da91680ca1f \
         67b15446c6ff1adb19349bc5d88c6f45 \
         fabc5112706c796671851f113eb99505 \
         5150b0f9f5e5bddd703bd6afb72e1e69 \
-        d6ba18ab1d4089fe3fb652ca36e4a998 \
+        2420f3d4a8596c2a9f7ec381e383bd32 \
         bba8ffaf00ffd88011f61edfac177107 \
         13a51212a18799d3a7022a12244a8ce3 \
         d5489ff3f6a307622ba98c4def55cdb5 \
@@ -605,12 +674,13 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         beb7b6af9c628f2d6edb7ec0a73412b1 \
         90930de2e2fa1ed24455b2c7abf9e50d \
         29e548496d699fbd888e4a65ec2d1488 \
+        6eb014e73f66bc13226e0ef6d815d375 \
         7b1261ea730a9314bc9bcdf4a379bf98 \
         5e4ad69737043efed21e99c959727ef5 \
         4d101ab24d14c54937c5f45ece8fad5f \
         fdf3aa5e1f6c33e4f68b0f7b08e1e94e \
         03ab8314169f64c7a958f1a8b7d43517 \
-        45e90bebdf7d2ec036c595796757b354 \
+        7f5968a4b096a6441764934c8df4438f \
         1a051b9ff8a147efd90f51dbd5d65e1b \
         2d8d8b377d144f5e32b4f65a69eb0b24 \
         f505a218806e44b2369671089d65e839 \
@@ -622,9 +692,9 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         64111c20b69aa1532fb66b70c4660b55 \
         d8d8d451b56798b0485b1f21e31bfed2 \
         8b4d8c7b6e3a060d365bc1ad650929fa \
-        72696c3c7b35807d51fdc9692794aea4 \
+        aaa13d03f0dbd4738e8845e830123065 \
         30f8c7ce8e7a3a98039d34a07556435d \
-        6022cfe830087be40e5ef983c5eadbfa \
+        dc82585b41121d95b2cee32399333b75 \
         ec85c085ef73c01c7d6c6a9eb31903f6 \
         e3932c56e06c7d1e780242ca5feba32f \
         823b1a0c367f5bf34ff38a7148cab53a \
@@ -634,7 +704,7 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         31bc883e6f9b36925f55460401197274 \
         1a3070ee58d2d21cb6adaacc71ff27cd \
         e4e7efe2ab7921499d5c247a349e9e1f \
-        7762a8efcd59bf7cc4a9d7ddf89f1953 \
+        06ef8d98076e18e0eccbe2808b2ddb6e \
         21b43d5721b3a9c16059acb691f4314d \
         2fcf5fe983975bbcea43129c9fb31923 \
         508a7f3cd5f4b409e22cf877aecfca11 \
@@ -643,6 +713,7 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         5988bad1543264a9f48b542192e7de9a \
         24ef1811d6646fdbd7908f40ffc6c054 \
         c9defe80406280bcfce4ecf31c0200b3 \
+        469ee8d5a9cadca9366fff047b92b583 \
         43661dc16a38eb42bd49a11b9f00d6f4 \
         82d13642cb366d10feed4e06220eea64 \
         f74dd8f5f9f972335eff63649cfcd5ba \
@@ -650,6 +721,8 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         bcc5d4659d3210ea73d37c9f02adbbd3 \
         781d4ccf5d04c98fa02af207a9639249 \
         90253ab52670a0551a533eb78a1f6b10 \
+        b7d89a0e930c5790717ac65d655767d2 \
+        8e5f1eee55a9002adaf7c9c4f823ba9d \
         be9ffe9cd74d80c5889251af75a2b987 \
         d78a16d47bd81866083446993f48afe5 \
         5b80104a258d778b74583757a3a5d43c \
@@ -659,10 +732,12 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         8f6b6cc71be0473b79c65abfea592c07 \
         6e328718765f2352dd34f10215488fbb \
         73d602cc41e3e431bf4fabd129ae1616 \
+        ebdff467249aa3dca005a441dc824236 \
         5e7f9a17d31e264f87d3e14b85d7da3f \
         a8de006fe0c7e373c560dd51599287a8 \
         cc180843b3b626ede01ebd9a0d9fbdaa \
         3e61457993a6e3fdaaf2fbe82bd7dff3 \
+        8d3fbc736a60102fa220dcae70bc6102 \
         c6c50e4feea5f4cc4e1fb3c7e88606a5 \
         ea1d6cb5bae32581bf49dc8fe44e76e7 \
         c7d88c3e5879e6ff1c468568c049d9c7 \
@@ -678,13 +753,16 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         519bfbdd19531f1d7b775bfa7ce4ee80 \
         e2163c836e909e7749c6f5bd7a6a4421 \
         8c7b7ae5c20f57acbba091202f1d79f8 \
+        dcc300e7f6b1d8eb0f68c762bb5f7db0 \
         e876964c7b83db85fb7897bee7ad0f45 \
         8134a2eb0049ba55aaccbd2e5a1ad832 \
+        36cbce768155bdac8934efa262d75fe3 \
         dfbd8371187d9453f7461825972272bb \
         10291d9a0022076bc0827250816d3476 \
         8cf3e6ccd359849ae4e88e0aa69ddae0 \
         a42cc2834b2150027d7b427558a87803 \
         087bfc476e9d73628cebd265590f11f7 \
+        b390278bbea483da591b1bc026be5fa2 \
         240cfb5665ad3457b28bcdc139393e6d \
         795e1390b7267ca40d64fe204dfa6930 \
         eb721c4d9e5dba8f93e9de0a80036ec3 \
@@ -707,6 +785,11 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         5a5a26fdadd0b48aff2bc8b870379f51 \
         dd49ae98e931a6fd658eee06cd8f451e \
         1a6fe140a2e0cb59c8383576a1922743 \
+        bb5ba81426269a1802c977b4372e8ab8 \
+        83635b600b4970f4e8865b09eca994f2 \
+        e6ede2f5d5462abe78533c1b9e231edd \
+        46a8f3c267b2bd314e2b1c20bae28d6d \
+        5124ae6a90bd29e960e8cffc674b75be \
         1fd81faa427d2f4d185a0ea2d7fa0df0 \
         193368dc66153a9a0514b2914c9cfaa5 \
         c57cbd1119703ddacef1f7523b5beb41 \
@@ -725,6 +808,7 @@ MD5SUM="ad3bcbd51b996ba6e9338edf8b1c7992 \
         d9c86ac3f5060d384d3a4c3f99fdadeb \
         87296707bae851dfed096d30ae254334 \
         2dde42b295cb11f95119d92721a3f0bd \
+        33366e46577dcbc5f2f12c821c25e5d5 \
         1b804d373f9d039ee9eeff6017c4480c \
         aa21a0ccffbd119424b5ab3b14a1d753 \
         a78d9b7d812b68bc4b27b4f23d46ced1 \
