@@ -1,6 +1,6 @@
 # ncspot-slackbuild
 
-This is a SlackBuild for [Henrik Friedrichsen's ncspot](https://github.com/hrkfdn/ncspot) (version 0.9.3), an `ncurses` Spotify client written in `rust`. It is compatible with a full installation of Slackware -current as of December 11th, 2021.
+This is a SlackBuild for [Henrik Friedrichsen's ncspot](https://github.com/hrkfdn/ncspot) (version 0.9.4), an `ncurses` Spotify client written in `rust`. It is compatible with a full installation of Slackware -current as of January 2nd, 2022.
 
 **Sources**
 

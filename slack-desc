@@ -15,5 +15,5 @@ ncspot:
 ncspot: ncspot saves its configuration to ~/.config/ncspot/config.toml.
 ncspot:
 ncspot: Author: Henrik Friedrichsen
-ncspot: Version 0.5.0
+ncspot: Version 0.9.4
 ncspot: Homepage: https://github.com/hrkfdn/ncspot
