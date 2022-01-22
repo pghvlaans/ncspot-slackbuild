@@ -176,7 +176,6 @@ DOWNLOAD="https://github.com/hrkfdn/ncspot/archive/v0.9.5/ncspot-0.9.5.tar.gz \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/miow/miow-0.3.7.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/native-tls/native-tls-0.2.8.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/nb-connect/nb-connect-1.2.0.crate \
-          https://crates-io.s3-us-west-1.amazonaws.com/crates/ncspot/ncspot-0.9.5.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ncurses/ncurses-5.101.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk/ndk-0.3.0.crate \
           https://crates-io.s3-us-west-1.amazonaws.com/crates/ndk/ndk-0.6.0.crate \
@@ -600,7 +599,6 @@ MD5SUM="26b30238d1497045a38bc0bb58e8d6c4 \
         4604959975c2154a14f6b5e97444e2c8 \
         1e10d623dcba53dc554ee403cbcb3b29 \
         4917ff4eaed099a21ff16b96f0df49cb \
-        556679fe5f706b1653c37c09e684eb19 \
         81f3d69af8142596468325954a52dea3 \
         1350474dafc8340347a27e7068b8a9d4 \
         1a6e77e2f6f916ef7a5a9481ed426b76 \
