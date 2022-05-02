@@ -14,6 +14,6 @@ ncspot: account is needed.
 ncspot:
 ncspot: ncspot saves its configuration to ~/.config/ncspot/config.toml.
 ncspot:
-ncspot: Version 0.9.7
+ncspot: Version 0.9.8
 ncspot: Author: Henrik Friedrichsen
 ncspot: Homepage: https://github.com/hrkfdn/ncspot
