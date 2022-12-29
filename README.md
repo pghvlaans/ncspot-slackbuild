@@ -1,14 +1,14 @@
 # ncspot-slackbuild
 
-`ncspot` is now available at [slackbuilds.org](https://slackbuilds.org/repository/15.0/audio/ncspot/) for Slackware 15.0! This repository will remain up to track -current.
+`ncspot-0.11.0` is now available at [slackbuilds.org](https://slackbuilds.org/repository/15.0/audio/ncspot/) for Slackware 15.0! This repository will remain up to provide the latest version on -current.
 
-This is a SlackBuild for [Henrik Friedrichsen's ncspot](https://github.com/hrkfdn/ncspot) (version 0.11.2), an `ncurses` Spotify client written in `rust`. It is compatible with a full installation of Slackware -current as of October 16, 2022.
+This is a SlackBuild for [Henrik Friedrichsen's ncspot](https://github.com/hrkfdn/ncspot) (version 0.12.0), an `ncurses` Spotify client written in `rust`. It is compatible with a full installation of Slackware -current as of December 29, 2022.
 
 For Slackware 15.0, please use the files at [slackbuilds.org](https://slackbuilds.org/repository/15.0/audio/ncspot/). Due to incompatibilities with the version of `rustc` on 15.0, this SlackBuild will only work on -current.
 
 **Sources**
 
-Being a `rust`-based project, hundreds of "crates" are included among the sources. `source ncspot.info` and `wget $DOWNLOAD` simplify the task of downloading considerably! (This method does not work with zsh; use bash instead.)
+Being a `rust`-based project, hundreds of "crates" are included among the sources. `source ./ncspot.info` and `wget $DOWNLOAD` simplify the task of downloading considerably! (This method does not work with `zsh`; use `bash` or `ksh` instead.)
 
 **Dependencies**
 
