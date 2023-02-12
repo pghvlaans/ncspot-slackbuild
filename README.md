@@ -1,15 +1,6 @@
 # ncspot-slackbuild
 
-`ncspot-0.11.0` is now available at [slackbuilds.org](https://slackbuilds.org/repository/15.0/audio/ncspot/) for Slackware 15.0! This repository will remain up to provide the latest version on -current.
+Now that the latest versions of `ncspot` can be built on Slackware 15.0 (with `rust16` as a 15.0-only dependency), it is no longer necessary to provide a separate script for Slackware -current. This repo has been archived.
 
-This is a SlackBuild for [Henrik Friedrichsen's ncspot](https://github.com/hrkfdn/ncspot) (version 0.12.0), an `ncurses` Spotify client written in `rust`. It is compatible with a full installation of Slackware -current as of December 29, 2022.
+Visit SlackBuilds Online for the latest [ncspot](https://slackbuilds.org/repository/15.0/audio/ncspot/?search=ncspot) and [rust16](https://slackbuilds.org/repository/15.0/development/rust16/?search=rust16) scripts.
 
-For Slackware 15.0, please use the files at [slackbuilds.org](https://slackbuilds.org/repository/15.0/audio/ncspot/). Due to incompatibilities with the version of `rustc` on 15.0, this SlackBuild will only work on -current.
-
-**Sources**
-
-Being a `rust`-based project, hundreds of "crates" are included among the sources. `source ./ncspot.info` and `wget $DOWNLOAD` simplify the task of downloading considerably! (This method does not work with `zsh`; use `bash` or `ksh` instead.)
-
-**Dependencies**
-
-`ueberzug` is an optional runtime dependency that is needed to display album art. To enable this feature, use `COVERS=yes ./ncspot.SlackBuild`. In addition, `ncspot` will not work without a premium Spotify account.
